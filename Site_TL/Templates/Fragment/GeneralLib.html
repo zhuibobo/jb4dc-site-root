@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<th:block th:fragment="GeneralLib" th:with="urlts=${'V2'}" >
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>JBuild4D-Cloud</title>
+    <script type="text/javascript" th:src="@{/Resources/Js/External/JQuery-3.5.1/jquery-3.5.1.min.js(urlts=${urlts})}"></script>
+    <script type="text/javascript" th:src="@{/Js/JBuild4DCLib.js(urlts=${urlts})}"></script>
+</th:block>
+<th:block th:fragment="ThemesLib" th:with="theme=${'Themes/Default'},urlts=${'V1'}" >
+    <link rel="stylesheet" type="text/css" th:href="@{/{theme}/Css/JBuild4DC.css(theme=${theme},urlts=${urlts})}" />
+</th:block>
+<th:block th:fragment="BaseInfo" th:with="urlts=${'V1'}" >
+    <script type="text/javascript" th:inline="javascript">
+        /*<![CDATA[*/
+        var basePath = /*[[${#httpServletRequest.getScheme() + "://" + #httpServletRequest.getServerName() + ":" + #httpServletRequest.getServerPort() + #httpServletRequest.getContextPath()}]]*/;
+        function getBaseUrl() {
+            return basePath;
+            /*$("#basePathUrl").val(basePath);
+            var a = $("#basePathUrl").val();
+            return a;*/
+        }
+        /*]]>*/
+    </script>
+</th:block>

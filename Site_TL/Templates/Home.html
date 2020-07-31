@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <th:block th:replace="Templates/Fragment/GeneralLib::GeneralLib"></th:block>
+    <th:block th:replace="Templates/Fragment/GeneralLib::ThemesLib"></th:block>
+    <th:block th:replace="Templates/Fragment/GeneralLib::BaseInfo"></th:block>
+    <title>Title</title>
+    <script type="text/javascript" th:inline="javascript">
+        $(function () {
+            var imageurl="@{/Resources/Images/exit.png}";
+            var basePath = getBaseUrl();
+            console.log(basePath);
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <th:block th:replace="Templates/Fragment/HeaderNavigation::HeaderNavigation1"></th:block>
+        <img th:src="@{/Resources/Images/exit.png}">
+        你妹啊
+        <th:block th:replace="Templates/Fragment/Footer::Footer1"></th:block>
+    </div>
+</body>
+
+</html>

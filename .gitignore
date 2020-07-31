@@ -1,0 +1,3 @@
+# Project exclude paths
+/jb4dc-site-service/target/
+/jb4dc-site-tl-web-server/target/
